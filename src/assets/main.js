@@ -6,9 +6,6 @@ function getBadges (){
     type:'GET',
     dataType: 'jsonp',
     success: successFn,
-    complete: function(){
-      console.log("This request is complete");
-    }
   });
 }
 function successFn(result){
@@ -19,10 +16,10 @@ function successFn(result){
     $('#badges').append(
       `<div class = "course">
         <h3>`+ title + `</h3>
-        <img src=`+ badge +`</img>
-        <a href =` + courseUrl + `target = '_blank' class = 'btn btn-primary'>See Course</a>
+        <img src="`+ badge +`"</>
+        <a href="` + courseUrl + `"target = '_blank' class = 'btn btn-primary'>See Course</a>
       </div>`);
-    }
+    };
   console.log(result);
 }
 
